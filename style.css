@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 7.5vmin;
+}
+
+#tabuleiro-jogo {
+  --grid-size: 4;
+  --posicao-size: 20vmin;
+  --posicao-gap: 2vmin; 
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--posicao-size));
+  grid-template-rows: repeat(var(--grid-size), var(--posicao-size));
+  background-color: #CCC;
+  gap: var(--posicao-gap);
+  border-radius: 1vmin;
+  padding: var(--posicao-gap);
+  position: relative;
+}
+
+.posicao {
+  background-color: #AAA;
+  border-radius: 1vmin;
+}
+
+.title {
+  --x: 1;
+  --y: 3;
+  --background-lightness: 80%;
+  --text-lightness: 20%;
+  position: absolute;
+  display: flex;
+  width: var(--posicao-size);
+  height: var(--posicao-size);
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vmin;
+  top: calc(var(--y) * (var(--posicao-size) + var(--posicao-gap)) + var(--posicao-gap));
+  left: calc(var(--x) * (var(--posicao-size) + var(--posicao-gap)) + var(--posicao-gap));
+  font-weight: bold;
+  background-color: hsl(200, 50%, var(--background-lightness));
+  color: hsl(200, 25%, var(--text-lightness));
+}
