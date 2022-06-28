@@ -34,10 +34,6 @@ body {
 }
 
 .title {
-  --x: 1;
-  --y: 3;
-  --background-lightness: 80%;
-  --text-lightness: 20%;
   position: absolute;
   display: flex;
   width: var(--posicao-size);
@@ -50,4 +46,13 @@ body {
   font-weight: bold;
   background-color: hsl(200, 50%, var(--background-lightness));
   color: hsl(200, 25%, var(--text-lightness));
+  animation: show 200ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: -5s;
+    transform: scale(0);
+  }
 }
