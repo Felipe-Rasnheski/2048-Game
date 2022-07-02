@@ -16,12 +16,12 @@ body {
 
 #tabuleiro-jogo { 
   display: grid;
-  grid-template-columns: repeat(var(--grid-size), var(--posicao-size));
-  grid-template-rows: repeat(var(--grid-size), var(--posicao-size));
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
   background-color: #CCC;
-  gap: var(--posicao-gap);
+  gap: var(--cell-gap);
   border-radius: 1vmin;
-  padding: var(--posicao-gap);
+  padding: var(--cell-gap);
   position: relative;
 }
 
@@ -33,13 +33,13 @@ body {
 .title {
   position: absolute;
   display: flex;
-  width: var(--posicao-size);
-  height: var(--posicao-size);
+  width: var(--cell-size);
+  height: var(--cell-size);
   justify-content: center;
   align-items: center;
   border-radius: 1vmin;
-  top: calc(var(--y) * (var(--posicao-size) + var(--posicao-gap)) + var(--posicao-gap));
-  left: calc(var(--x) * (var(--posicao-size) + var(--posicao-gap)) + var(--posicao-gap));
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
   font-weight: bold;
   background-color: hsl(200, 50%, var(--background-lightness));
   color: hsl(200, 25%, var(--text-lightness));
