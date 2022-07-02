@@ -14,10 +14,7 @@ body {
   font-size: 7.5vmin;
 }
 
-#tabuleiro-jogo {
-  --grid-size: 4;
-  --posicao-size: 20vmin;
-  --posicao-gap: 2vmin; 
+#tabuleiro-jogo { 
   display: grid;
   grid-template-columns: repeat(var(--grid-size), var(--posicao-size));
   grid-template-rows: repeat(var(--grid-size), var(--posicao-size));
