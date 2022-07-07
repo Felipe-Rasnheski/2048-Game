@@ -30,7 +30,7 @@ body {
   border-radius: 1vmin;
 }
 
-.title {
+.tile {
   position: absolute;
   display: flex;
   width: var(--cell-size);
